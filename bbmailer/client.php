@@ -23,6 +23,19 @@ class Client {
 		return $this->_send($endpoint, $request_data);
 	}
 
+	public function send_event($event_name, $customer_email, $properties) {
+		$endpoint = "https://api.email-template.net/api/send_event";
+
+		$request_data = array(
+			'auth_token' => $this->auth_token,
+			'email' => $customer_email,
+			'name' => $event_name,
+			"properties" => $properties
+		);
+
+		return $this->_send($endpoint, $request_data);
+	}
+
 
     private function _send($endpoint, $request_data) {
 		$request_data = json_encode($request_data);

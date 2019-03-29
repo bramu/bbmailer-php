@@ -21,8 +21,8 @@ class BBMailer {
 		return $this->client->send_email($template_name, $to_address, $data_mapping);
 	}
 
-	public function send_event($email_address, $name, $properties) {
-		return $this->client->send_event($email_address, $name, $properties);
+	public function send_event($event_name, $customer_email, $event_properties) {
+		return $this->client->send_event($event_name, $customer_email, $event_properties);
 	}
 
 }
