@@ -1,0 +1,10 @@
+{
+    "name": "bbmailer/bbmailer-php",
+    "description": "Library for sending emails and event with BBMailer's email platform",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "autoload": {
+        "classmap": ["bbmailer.php"]
+    }
+}
