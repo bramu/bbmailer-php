@@ -11,11 +11,11 @@ class Client {
     }
 
     public function send_email($template_name, $to_address, $data_mapping) {
-		$endpoint = "http://localhost:4000/api/send_event";
+		$endpoint = "https://api.email-template.net/api/send_email";
 
 		$request_data = array(
 			'auth_token' => $this->auth_token,
-			'email' => $to_address,
+			'to_address' => $to_address,
 			'template_name' => $template_name,
 			"data_mapping" => $data_mapping
 		);
